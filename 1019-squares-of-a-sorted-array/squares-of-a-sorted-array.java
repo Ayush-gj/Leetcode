@@ -3,7 +3,7 @@ class Solution {
         int[] temp=new int[nums.length];
         int left = 0, right=nums.length-1;
         for(int i=nums.length-1;i>=0;i--){
-            if(Math.abs(nums[left]) > Math.abs(nums[right])){
+            if(nums[left]*nums[left] > nums[right]*nums[right]){
                 temp[i]=nums[left]*nums[left];
                 left++;
             }else{
