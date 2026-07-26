@@ -1,15 +1,16 @@
 class Solution {
     public boolean isUgly(int n) {
-    if (n <= 0)
+    int temp=n;
+    if (temp <= 0)
     return false;
 
-    while (n % 2 == 0) 
-    n /= 2;
-    while (n % 3 == 0)
-    n /= 3;
-    while (n % 5 == 0) 
-    n /= 5;
+    while (temp % 2 == 0) 
+    temp /= 2;
+    while (temp % 3 == 0)
+    temp /= 3;
+    while (temp % 5 == 0) 
+    temp /= 5;
 
-    return n==1;
+    return temp==1;
     }
 }
