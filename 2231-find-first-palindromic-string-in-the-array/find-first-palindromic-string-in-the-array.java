@@ -12,7 +12,7 @@ class Solution {
                     break;
                 }
             }
-                if(i >= j) return word;
+                if(i >= j) return ans = word;
         }
         return ans;
     }
