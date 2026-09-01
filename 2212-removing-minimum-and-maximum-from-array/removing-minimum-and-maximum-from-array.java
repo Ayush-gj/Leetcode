@@ -13,16 +13,17 @@ class Solution {
                 maxIndex = i;
             }
         }
-        minIndex++;
-        maxIndex++;
+
+        int left = Math.min(minIndex , maxIndex);
+        int right = Math.max(minIndex , maxIndex);
 
         // if((minIndex <= nums.length/2 && maxIndex <= nums.length/2) || (minIndex >= nums.length/2 && maxIndex >= nums.length/2)){
         //     ans = Math.max(minIndex , maxIndex);
         // }
 
-        int front = Math.max(minIndex , maxIndex);
-        int back = Math.max(nums.length - minIndex + 1 , nums.length - maxIndex + 1);
-        int mix = Math.min(minIndex + (nums.length - maxIndex + 1) , maxIndex + (nums.length - minIndex + 1));
+        int front = right + 1;
+        int back = nums.length - left;
+        int mix = left + 1 + nums.length - right;
 
         return Math.min(front , Math.min(back , mix));
     }
