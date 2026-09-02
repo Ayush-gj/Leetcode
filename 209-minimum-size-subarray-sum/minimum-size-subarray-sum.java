@@ -4,13 +4,6 @@ class Solution {
         int res = Integer.MAX_VALUE;
         int sum = 0;
         int n = nums.length;
-        for(int i=0;i<n;i++){
-            sum += nums[i];
-        }
-        if(sum < target){
-            return 0;
-        }
-        sum = 0;
         while(high < n){
             sum = sum + nums[high];
 
@@ -21,6 +14,9 @@ class Solution {
                 low++;
             }
             high++;
+        }
+        if(res == Integer.MAX_VALUE){
+            return 0;
         }
         return res;
     }
