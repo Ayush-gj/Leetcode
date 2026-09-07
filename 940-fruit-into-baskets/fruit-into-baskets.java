@@ -1,6 +1,5 @@
 class Solution {
     public int totalFruit(int[] fruits) {
-        int k = 2;
         int n = fruits.length;
         int left = 0;
         int res = 0;
