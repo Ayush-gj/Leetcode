@@ -11,7 +11,7 @@ class Solution {
 
             max = Math.max(val1 , Math.max(val2 , val3));
             min = Math.min(val1 , Math.min(val2 , val3));
-            ans = Math.max(ans , max);
+            ans = Math.max(ans , Math.max(max , min));
         }
         return ans;
     }
