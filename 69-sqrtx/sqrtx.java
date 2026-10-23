@@ -8,7 +8,7 @@ class Solution {
         while (low <= high) {
             long mid = low + (high - low) / 2;
             
-            if (mid * mid == x) {
+            if (mid * mid == n) {
                 return (int)mid;
             } else if (mid * mid < x) {
                 low = mid + 1;
