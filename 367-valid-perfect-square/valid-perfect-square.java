@@ -1,19 +1,21 @@
 class Solution {
     public boolean isPerfectSquare(int num) {
-        if (num<2)
-        return true;
-        long left=2,right=num/2;
-        while(left<=right) {
-            long mid=left+(right-left)/2;
-            long sq=mid*mid;
-            if(sq==num)
-            return true;
-            if(sq<num){
-                left=mid+1;
-            }else{
-                right=mid-1;
+        if (num < 2) return true;
+
+        int low = 1, high = num / 2;
+        
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            
+            if ((long) mid * mid == num) {
+                return true;
+            } else if ((long) mid * mid < num) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
             }
         }
+        
         return false;
     }
 }
